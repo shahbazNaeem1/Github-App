@@ -4,7 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 
 import * as navigators from '../constants/navigators';
-import AuthScreen from '../screens/AuthScreen';
+import * as screens from '../screens';
 
 const Stack = createStackNavigator();
 
@@ -16,7 +16,7 @@ const Navigation = props => {
       <Stack.Navigator>
         <Stack.Screen
           name={navigators.AUTH_SCREEN}
-          component={AuthScreen}
+          component={screens.AuthScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
@@ -24,12 +24,25 @@ const Navigation = props => {
   };
 
   sessionScreens = () => {
-    return <Stack.Navigator></Stack.Navigator>;
+    return (
+      <Stack.Navigator>
+        <Stack.Screen
+          name={navigators.HOME_SCREEN}
+          component={screens.HomeScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name={navigators.DATA_SCREEN}
+          component={screens.DataScreen}
+          options={{headerShown: false}}
+        />
+      </Stack.Navigator>
+    );
   };
 
   return (
     <NavigationContainer>
-      {isLoggedIn ? authScreens() : sessionScreens()}
+      {isLoggedIn ? sessionScreens() : authScreens()}
     </NavigationContainer>
   );
 };
