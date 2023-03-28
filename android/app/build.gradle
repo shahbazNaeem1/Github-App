@@ -131,11 +131,12 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.github_app"
+        applicationId "com.githubApp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        manifestPlaceholders = [auth0Domain: "dev-m6tc8a4n.us.auth0.com", auth0Scheme: "${applicationId}"]
     }
     splits {
         abi {
