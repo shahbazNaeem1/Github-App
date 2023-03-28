@@ -5,6 +5,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {getRepoCommits} from '../api/githubAPI';
 import CommitCard from '../components/CommitCard';
 import NavHeader from '../components/NavHeader';
+import NavBar from '../components/NavBar';
 import {formatResponse} from '../helpers/responseFormatter';
 
 const DataScreen = props => {
@@ -49,6 +50,7 @@ const DataScreen = props => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <NavBar />
       <NavHeader navigation={navigation} title={'Commits'} />
       <ScrollView
         style={styles.scrollContainer}
