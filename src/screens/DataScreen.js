@@ -61,7 +61,7 @@ const DataScreen = props => {
         }}
         scrollEventThrottle={1000}>
         {commits.length === 0 ? (
-          <Text style={styles.PrimaryText}>No Commits in this Repo</Text>
+          <Text style={styles.PrimaryText}>No Commits</Text>
         ) : (
           <View>
             {commits.map((item, index) => (
