@@ -40,5 +40,36 @@ Github app is a react native test project app that work on authentication with o
 
 - Clone the reposity [Github App React Native](https://github.com/badershafiq/githubAppReactNative).
 - Run ```yarn install```
-- For loading iOS dependencies run ```cd ios && pod install```, ```yarn start```, and ```yarn ios```
-- For loading Android dependencies run ```yarn start```, and ```yarn android```
+
+Setup the development environment first.
+
+- [React Native CLI environment setup](https://reactnative.dev/docs/environment-setup)
+
+## Setup Guide for Android
+
+Once the android development environment setup is completed
+
+- Run ```yarn start```
+- Run ```yarn android```
+
+Or you can install and setup android studio. Then Follow these steps:
+
+- Open project>android folder in android studio
+- Let android studio build all the gradle files and compile the project for android environment
+- Connect your android device or select an android emulator and start the project
+- Android studio will compile, build, and install the app
+
+## Setup Guide for iOS
+
+[You need a MAC to run this application on iOS](ttps://reactnative.dev/docs/environment-setup)
+
+Once the iOS development environment setup is completed
+
+- Run ```yarn start```
+- Run ```yarn ios```
+
+Or you can install and setup XCode on MAC. Then Follow these steps:
+
+- Open project>ios>github_app.xcworkspace in XCode
+- Connect your iOS device or select an iOS emulator and start the project
+- XCode will compile, build, and install the app
