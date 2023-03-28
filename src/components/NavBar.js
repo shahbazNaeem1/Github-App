@@ -3,14 +3,20 @@ import {connect} from 'react-redux';
 import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 import {logOut} from '../actions/authActions';
+import {AUTH0_CLIENT} from '../constants/auth0';
 
 const NavBar = props => {
   const {logOut} = props;
 
+  endSession = () => {
+    AUTH0_CLIENT.webAuth.clearSession().catch(error => console.log(error));
+    logOut();
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.header}>Github App</Text>
-      <TouchableOpacity style={styles.logoutButton} onPress={logOut}>
+      <TouchableOpacity style={styles.logoutButton} onPress={endSession}>
         <Text style={styles.logoutContent}>Log Out</Text>
       </TouchableOpacity>
     </View>
