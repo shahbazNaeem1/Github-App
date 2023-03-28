@@ -3,6 +3,8 @@
 
 Github app is a react native test project app that work on authentication with one of the modern authentication service [Auth0](https://auth0.com). And we can see a list of commits inside a spefic repository on [Github](https://github.com).
 
+![App Demo](https://media.giphy.com/media/6hu8E4c8GcSK7fjm3F/giphy.gif)
+
 ## Contents
 
 - [Requirements](#-requirements)
