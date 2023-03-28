@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="30" />
 
     <application
         android:usesCleartextTraffic="true"
